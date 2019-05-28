@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="icon" href="../Media/Icons/Icon-Square.png" />
+    <link href="../Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="description" content="שטח רכיב - חיפוש אופניים, השוואה ומידע" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div id="headercontent">
+            <a title="חזור לדף הבית" href="Default.aspx">
+                <img alt="Logo" src="../Media/Icons/Logo-Comp.png" /></a>
+            <h1>שטח רכיב</h1>
+        </div>
+    </header>
+    <br />
+    <nav>
+        <ul>
+            <li class="hide"><a href="#mainContent">דלג אל התוכן</a></li>
+            <li><a href="Default.aspx">בית</a></li>
+            <li><a href="FindBike.aspx">חפש אופניים</a></li>
+            <li><a href="Catalog.aspx">קטלוג אופניים</a></li>
+            <li><a href="Media.aspx">מדיה</a></li>
+            <li id="enter" runat="server"><a href="Login.aspx">כניסה</a></li>
+            <li id="logout" runat="server" visible="false"><a href="Logout.aspx">התנתק</a></li>
+            <li id="welcome" runat="server" visible="false"><a id="profileLink" runat="server"><span runat="server" id="hello"></span><br /><span runat="server" id="username"></span></a></li>
+        </ul>
+    </nav>
+    <hr />
+    <main id="mainContent">
+            <div>
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+    </main><hr />
+    <footer>
+        <a href="AdminPanel.aspx" id="adminLink" runat="server">פאנל ניהול</a>
+        <span>משתמשים שונים מחוברים כעת: </span>
+        <%=usersIn %>
+         <a href="#top">דווש למעלה!</a><br />
+        <a href="mailto:alonbd21@gmail.com">כתוב לנו במייל</a><br />
+        <span class="credit">נוצר במסגרת בגרות מדעי המחשב, אלון בן דב</span><br />
+    </footer>
+</body>
+</html>

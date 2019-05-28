@@ -1,0 +1,348 @@
+﻿/*GENERAL RULES*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    background-color:#efefef ;
+}
+::selection {
+    color: #efefef;
+    background: #FF3B3F;
+}
+
+:any-link {
+    color: #323232;
+    text-decoration: underline dotted;
+}
+
+hr {
+    border: 2px dashed #A9A9A9;
+    box-shadow: 0 2px 2px 4px rgba(128, 128, 128, 0.1);
+    margin: 3em auto;
+}
+
+h1 {
+    font-family: Scular,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+label{
+    width: 10em;
+}
+input, button {
+    font-family: Heebo,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #323232;
+    width: 12em;
+}
+    input[type="radio"], input[type="checkbox"]{
+        width: auto;
+        margin-right: 2em;
+    }
+textarea{
+    width: 15em;
+    height: 3em;
+}
+
+table {
+    margin: auto;
+}
+
+body {
+    border-top: 5px solid #FF3B3F;
+    direction: rtl;
+    background-image: linear-gradient(#a9a9a9 0%, #efefef 14em);
+    background-repeat: repeat-x;
+    font-size: 62.5%;
+    height: 100%;
+}
+article p, article ul{
+    text-align: right;
+    list-style:disc;
+    margin-right:10em;
+}
+article img{
+    margin-bottom: 13em;
+    margin-top: 5em;
+}
+/*Header*/
+header {
+    display: inline;
+}
+
+header img {
+    display:block;
+    margin: 1em auto;
+    height: 14em;
+}
+
+    header h1 {
+        font-family: Scular,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0;
+        display: block;
+        margin: 1em auto;
+        font-size: 3em;
+        color: #323232;
+        transform: rotate(10deg);
+        text-align: center;
+    }
+
+/*Navigation*/
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #EFEFEF;
+    box-shadow: 0 1.6em 1.6em -.8em gray;
+    margin-bottom: 1.5em;
+    min-width: 80em;
+}
+
+    nav ul {
+        margin: 0;
+        display: block;
+        list-style: none;
+        padding: 1.6em 1.8em;
+    }
+
+    nav li {
+        display: inline;
+        text-align: center;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+
+    nav #enter, nav #welcome, nav #logout{
+        float: left;
+        margin-left: 2em;
+        margin-right: 0;
+    }
+
+        nav #welcome:not(:hover) {
+            position: relative;
+            bottom: 0.1em;
+            border: 1px solid #323232;
+            transition: border linear 150ms;
+            border-radius: 2.5em;
+        }
+
+        nav #welcome:hover {
+            position: relative;
+            border-radius: 2.5em;
+            bottom: 0.1em;
+            border: 1px solid #FF3B3F;
+            transition: border linear 150ms;
+        }
+        nav #welcome a:any-link {
+            padding: 0.1em 0.6em;
+        }
+
+    nav #hello {
+        color: #FF3B3F;
+        font-size: 70%;
+        text-decoration: underline;
+        text-decoration-color: #323232;
+    }
+
+    nav #username {
+        color: #323232;
+        font-size: 100%;
+        text-decoration: none;
+    }
+
+    nav #hello, nav #username {
+        display: inline-block;
+        margin: auto;
+        font-family: Carmela,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+        nav #enter a:any-link:not(:hover) {
+            color: #FF3B3F;
+            transition: background-color ease-in 250ms, color 250ms;
+            border: 1px solid #FF3B3F;
+        }
+
+        nav #enter a:any-link:hover {
+            border: 1px solid #FF3B3F;
+            background-color: #FF3B3F;
+            color: #EFEFEF;
+            transition: background-color ease-in 250ms, color 250ms;
+        }
+
+    nav a:any-link {
+        font-family: Carmela,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.6em;
+        padding: 0.6em 1.2em;
+        display: inline-block;
+        margin: auto;
+        color: #323232;
+    }
+
+        nav a:any-link:hover {
+            color: #FF3B3F;
+        }
+
+    .hide {
+        display:block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+/*Main*/
+main {
+    font-family: Heebo,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.6em;
+    margin: 2.5em;
+}
+
+/*Footer*/
+footer {
+    font-family: Heshbon,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    bottom: 0;
+    font-size: 1.2em;
+}
+
+    footer span, footer a:any-link {
+        display: block;
+        margin: 1em auto;
+    }
+
+    footer span.credit {
+        color: #a9a9a9;
+        font-size: 1em;
+    }
+
+    footer #adminLink:any-link {
+        color: indigo;
+        text-decoration: underline dotted;
+        text-decoration-color: indigo;
+        font-size: 120%;
+    }
+
+/*Login*/
+table.logintbl {
+    width: 20em;
+    margin: 0.6em auto;
+    border:none;
+}
+.logintbl tr {
+    margin-bottom:0.6em;
+    margin-top:0.6em;
+    border: none;
+}
+.logintbl tr, .logintbl th {
+    border: none;
+    font-weight: normal;
+}
+.logintbl tr :nth-child(even){
+    text-align:left;
+}
+.logintbl tr :nth-child(odd) {
+    text-align: right;
+}
+/*Other Forms*/
+.adminPanel td, .adminPanel th{
+    width: 6em;
+    text-align: center;
+}
+#adminTag {
+    color: indigo;
+}
+#mainErr, label.err {
+    font-family: Heshbon,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FF7900;
+    font-size: 80%;
+}
+fieldset input, fieldset label{
+    display:inline-block;
+    width: 15em;
+}
+fieldset input[type="radio"], fieldset input[type="checkbox"]{
+    display:inline;
+}
+fieldset label.small{
+    width: 5em;
+    text-align:right;
+}
+.bikeTemplate :any-link {
+    font-family: Heebo;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+}
+.bikeTemplate:not(:hover) {
+    margin: 2em;
+    background-color: #caebf2;
+    display: inline-block;
+    width: auto;
+    border-radius: 2em;
+    text-align: center;
+    border: 2px solid #caebf2;
+    transition: border linear 220ms, background-color linear 220ms;
+}
+.bikeTemplate:hover {
+    margin: 2em;
+    text-align: center;
+    background-color: #caebf2;
+    display: inline-block;
+    width: auto;
+    border-radius: 2em;
+    border: 2px solid black;
+    transition: border linear 220ms, background-color linear 220ms;
+}
+.bikeTxt{
+    display: inline;
+    text-align: center;
+}
+.bikeName {
+    font-size: 120%;
+}
+
+.bikeManu {
+    font-size: 80%;
+}
+
+.bikeTemplate img {
+    width: 20em;
+    margin: 0.5em, 0.5em, 0,0.5em;
+    border-radius: 2em;
+}
+/*Profile*/
+/*fonts import*/
+@font-face {
+    src: url(Fonts/heshbonbold.otf);
+    font-family: Heshbon;
+}
+
+@font-face {
+    src: url(Fonts/carmela.ttf);
+    font-family: Carmela;
+}
+
+@font-face {
+    src: url(Fonts/scularone.ttf);
+    font-family: Scular;
+}
+/* hebrew */
+@font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Heebo'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/heebo/v3/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin */
+@font-face {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Heebo'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/heebo/v3/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
