@@ -8,6 +8,14 @@
     <link href="../Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
     <meta name="description" content="שטח רכיב - חיפוש אופניים, השוואה ומידע" />
+    <script type="text/javascript">
+        var updateSpan = function () {
+            var clockSpan = document.getElementById("clock");
+            var d = new Date();
+            clockSpan.innetHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        };
+        setInterval(updateSpan(), 1000);
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -19,6 +27,7 @@
             <h1>שטח רכיב</h1>
         </div>
     </header>
+    <span id="clock"></span>
     <br />
     <nav>
         <ul>
