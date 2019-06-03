@@ -8,14 +8,6 @@
     <link href="../Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
     <meta name="description" content="שטח רכיב - חיפוש אופניים, השוואה ומידע" />
-    <script type="text/javascript">
-        var updateSpan = function () {
-            var clockSpan = document.getElementById("clock");
-            var d = new Date();
-            clockSpan.innetHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-        };
-        setInterval(updateSpan(), 1000);
-    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -57,5 +49,14 @@
         <a href="mailto:alonbd21@gmail.com">כתוב לנו במייל</a><br />
         <span class="credit">נוצר במסגרת בגרות מדעי המחשב, אלון בן דב</span><br />
     </footer>
+    <script type="text/javascript">
+        var span = document.getElementById("clock");
+        var updateSpan = function (clockSpan) { 
+            var d = new Date();
+            clockSpan.innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        };
+        updateSpan(span);
+        setInterval(updateSpan, 1000,span);
+    </script>
 </body>
 </html>
