@@ -19,6 +19,7 @@
             <h1>שטח רכיב</h1>
         </div>
     </header>
+    <span id="clock"></span>
     <br />
     <nav>
         <ul>
@@ -48,5 +49,14 @@
         <a href="mailto:alonbd21@gmail.com">כתוב לנו במייל</a><br />
         <span class="credit">נוצר במסגרת בגרות מדעי המחשב, אלון בן דב</span><br />
     </footer>
+    <script type="text/javascript">
+        var span = document.getElementById("clock");
+        var updateSpan = function (clockSpan) { 
+            var d = new Date();
+            clockSpan.innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        };
+        updateSpan(span);
+        setInterval(updateSpan, 1000,span);
+    </script>
 </body>
 </html>

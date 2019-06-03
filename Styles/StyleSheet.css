@@ -87,7 +87,19 @@ header img {
         transform: rotate(10deg);
         text-align: center;
     }
-
+#clock {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    font-size: 2em;
+    font-family: Carmela,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:300;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 0.05em solid #FF3B3F;
+    background-color: #caebf2;
+    color: #323232;
+}
 /*Navigation*/
 nav {
     width: 100%;
