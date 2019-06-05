@@ -21,8 +21,8 @@
                     <th>E-Mail</th>
                     <th>Active?</th>
                     <th>Admin?</th>
-                    <th>UPDATE</th>
                     <th>DELETE</th>
+                    <th>UPDATE</th>
                 </tr>
                 <asp:ListView ID="lv" runat="server">
                     <ItemTemplate>
