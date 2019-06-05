@@ -1,9 +1,0 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Testing_Default" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <input type="checkbox" id="chk" name="box" value="val" checked/>
-        <input type="submit" name="sub" value="mit" title="tit" aria-valuetext="valText" />
-</asp:Content>
-
