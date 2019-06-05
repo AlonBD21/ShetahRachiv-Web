@@ -14,7 +14,7 @@ public partial class FindBike : System.Web.UI.Page
     string[] styleSymbols;
     string styleSymbol;
     bool?[] fss;
-    bool? fs;
+    bool? fs; //Full Suspention
     bool[] manuSelect;
     int[] manuID;
     int resultRows;
@@ -39,6 +39,19 @@ public partial class FindBike : System.Web.UI.Page
                 ListItem newLi = new ListItem(dr["name"].ToString(), dr["manu_id"].ToString(), true);
                 newLi.Selected = true;
                 cblManu.Items.Add(newLi);
+            }
+            
+            if(AppCode.GetSesID(Session) >= 0)
+            {
+                using (UsersManager um = new UsersManager())
+                {
+                    int id = AppCode.GetSesID(Session);
+                    User user = um.GetUserFromID(id);
+                    if (user.dh) ddlStyle.SelectedIndex = 4;
+                    if (user.am) ddlStyle.SelectedIndex = 3;
+                    if (user.tr) ddlStyle.SelectedIndex = 2;
+                    if (user.dj) ddlStyle.SelectedIndex = 1;
+                }
             }
         }
     }
